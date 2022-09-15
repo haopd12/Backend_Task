@@ -1,0 +1,8 @@
+.output result.csv
+.mode column
+.header on
+.schema
+
+select * from Novel_Info;
+select * from Novel_Chapter;
+select * from Belonged_to

@@ -3,4 +3,4 @@
 .header on
 .schema
 
-select * from Chapter, No
+select * from Novel;

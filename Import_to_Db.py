@@ -1,9 +1,9 @@
 def Insert_Novel(novel_info = [],connection=""):
     cursor = connection.cursor()
-    columns = ['NID', 'Theme']
+    columns = ['NID', 'Poster', 'Theme']
     for row in novel_info:
         keys = tuple(row[c] for c in columns)
-        cursor.execute("insert into Novel values(?,?)", keys) 
+        cursor.execute("insert into Novel values(?,?,?)", keys) 
     
 def Insert_Chapter(chapter_info = [],connection=""):
     cursor = connection.cursor()

@@ -1,9 +1,3 @@
-from csv import list_dialects
-import os
-from bs4 import Tag
-from numpy import save
-
-
 try:
     from bs4 import BeautifulSoup
     import requests
@@ -83,17 +77,23 @@ class NovelScrapper:
         novel_tag = list_novel[0].select("div")
         i = 0  
         list_link = []
+        list_poster = []
         for tag in novel_tag:
             i += 1
             tag_a = tag.select('a')
             if len(tag_a) > 0 and i % 2 == 0:    
                 novel_link = tag_a[0]['href'] 
                 list_link.append(self.config.BASE_URL + novel_link)
+                novel_poster = tag_a[0].select("img")[0]['src']
+                list_poster.append(self.config.BASE_URL + novel_poster)
+        index = 0
         for link in list_link:
             ele_data = {
                 "NID": link,
+                "Poster": list_poster[index],
                 "Theme": theme.replace('/', '').replace('.html', ''),
             }
+            index += 1
             self.novel_info.append(ele_data)
         return list_link
     

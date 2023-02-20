@@ -1,3 +1,4 @@
+import sqlite3 
 def Insert_Novel(novel_info = [],connection=""):
     cursor = connection.cursor()
     columns = ['NID', 'Poster', 'Theme']

@@ -4,7 +4,7 @@ try:
     from scrapper.novel_scrapper import NovelScrapper
     from scrapper.config import Config
     import sqlite3
-    from import_to_db import Insert_Chapter, Insert_Novel, Insert_Novel_Chapter
+    from Import_to_Db import Insert_Chapter, Insert_Novel, Insert_Novel_Chapter
 except Exception as e:
     print("Caught exception while importing: {}".format(e))
     

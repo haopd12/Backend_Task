@@ -133,6 +133,6 @@ class NovelScrapper:
         #         for link in list_link:
         #             self.chapter_extract(link)
         for i in range(1,2):
-            list_link = self.get_novel(theme = list_theme[0], start = i)
+            list_link = self.get_novel(theme = list_theme[6], start = i)
             for link in list_link:
                 self.chapter_extract(link)

@@ -1,6 +1,0 @@
-.output result.csv
-.mode column
-.header on
-.schema
-
-select * from Novel;
